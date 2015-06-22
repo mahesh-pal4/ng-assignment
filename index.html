@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anglar Js Assignment</title>
+    <link rel="stylesheet" href="app/assets/css/style.css">
+</head>
+
+<body data-ng-app="userApp">
+    <div class="container">
+        <div class="inner-container" ng-controller="usersListController">
+            <div class="row margin-zero">
+                <h1><strong>Case Studies</strong></h1>
+            </div>
+            <div class="row description">
+                <div class="col-xs-12 col-sm-12 col-md-5">
+                    <h1>Feature article story title</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis id lorem volutpat auctor ornare convallis arcu. Praesent convallis quam ligula, non eleifend sem elementum a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque efficitur feugiat sem, quis lobortis augue dapibus quis. Suspendisse rhoncus eleifend mi. Quisque pellentesque accumsan imperdiet. Nulla aliquam, libero eget posuere scelerisque, arcu leo tincidunt metus, sed posuere felis velit nec purus.</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7">
+                    <img src="lib/images/home-image.png" width="100%" />
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-7"><h4><strong>23 Articles tagged Water</strong></h4></div>
+                <div class="col-xs-12 col-sm-8 col-md-5 textRight">Sort By: 
+                    <select ng-model="sortorder">
+                        <option value="-date.timestamp">Most Recent</option>
+                        <option value="title">Alphabetical</option>
+                    </select>
+                </div>
+            </div>
+            <hr />
+            <ul class="row listing">
+                <div ng-include="'app/views/users-list.html'"></div>
+            </ul>
+
+            <div class="load-more" ng-class="nextPageDisabledClass()" ng-click="loadMore()" ng-hide="loadMoreisHide">
+                <span class="refresh-icon"></span>Load More
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="app/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/services/users-factory.js"></script>
+    <script type="text/javascript" src="app/controllers/users-list-controller.js"></script>
+    <script type="text/javascript" src="lib/angular-route.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<li data-ng-repeat="field_data_alias in article_data_json | orderBy:sortorder" class="col-xs-12 col-sm-6 col-md-3 form-group">
+                    <div class="inner-wrapper">
+                        <img ng-src="lib{{field_data_alias.image}}" />
+                        <div class="article-heading">{{field_data_alias.title}}</div>
+                        <div class="article-date">{{field_data_alias.date.plain}}</div>
+                        <div class="article-caption">{{field_data_alias.caption | limitTo: 150}}</div>
+                        <ul class="article-tags">
+                            <li>{{field_data_alias.tags.0}}</li>
+                            <li>{{field_data_alias.tags.1}}</li>
+                            <li>{{field_data_alias.tags.2}}</li>
+                        </ul>
+                    </div>
+                </li>

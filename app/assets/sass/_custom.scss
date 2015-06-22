@@ -1,0 +1,98 @@
+.container{
+	background: #A0A0A0;
+	.inner-container{
+		padding: 3% 5%;
+		background: #fff;
+		@include border-radius(5px); 
+		@include border-bottom-radius(0);
+		margin-bottom: 50px;
+		margin-top: 25px;
+		.row{
+			margin:0px 10px;
+		}
+		.margin-zero{
+			margin:0px 20px 20px;
+			+ .row{
+				h1{
+					margin-top: 0;
+				}
+			}
+		}
+		.description{
+			margin-bottom: 30px;
+		}
+		.textRight{
+			text-align: right;
+			select{
+				  height: 35px;
+				  outline: none;
+			}
+		}
+		hr{
+			border-color: #c9c9c9;
+			margin: 10px 0;
+		}
+		.listing{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			li{
+				padding: 0;
+				.inner-wrapper{
+					width: 90%;
+					margin: 20px auto 0;
+					img{
+						width: 100%;
+						margin-bottom: 15px;
+					}
+					.article-heading{
+						font-weight: bold;
+						color: #222;
+					}
+					.article-date{
+						color: #999;
+						font-size: 90%;
+						margin-bottom: 10px;
+					}
+					.article-caption{
+						color: #222;
+						margin-bottom: 15px;
+					}
+					.article-tags {
+						padding: 0;
+						margin: 0;
+						list-style: none;
+						width: 100%;
+						li{
+							display: inline;
+							width: 33.3%;
+							font-size: 80%;
+							padding: 3px 5px;
+							background-color: #dedede;
+							@include border-radius(5px); 
+				  
+							color: #888;
+							margin: 5px 0px;
+						}
+					}
+				}
+			}
+		}	
+		.load-more{
+			width: 110px;
+			margin: 0 auto;
+			cursor: pointer;
+			.refresh-icon{
+				  background: url("../../../lib/images/refresh.png") no-repeat center center scroll #ddd;
+				  background-size: 80%;
+				  float: left;
+				  width: 20px;
+				  height: 20px;
+				  padding: 0;
+				  @include border-radius(10px); 
+				  margin-right: 5px;
+			}	
+		}
+		
+	}
+}
